@@ -1,3 +1,38 @@
 <div class="signup-container">
-  <div class="signup-box">fesfeesf</div>
+  <div class="signup-box">
+    <h1 class="title">
+      Join as <span class="dark">brand</span> or
+      <span class="dark">creator</span>
+    </h1>
+    <section
+      class="flex-row"
+      style="width: 100%; justify-content: space-between"
+    >
+      <app-user-type-input
+        [description]="brandSelectText"
+        [selected]="false"
+      ></app-user-type-input>
+      <app-user-type-input
+        [selected]="true"
+        [description]="creatorSelectText"
+      ></app-user-type-input>
+    </section>
+    <div class="flex-col width-full">
+      <div>
+        <label>Email</label>
+        <input placeholder="Enter your email address" type="email" />
+      </div>
+      <div>
+        <label>Password</label>
+        <input placeholder="Enter your email address" type="password" />
+      </div>
+      <div>
+        <label>Confirm Password</label>
+        <input placeholder="Enter your email address" type="password" />
+      </div>
+    </div>
+    <div>
+      <select name="" id="" type="checkbox"></select>
+    </div>
+  </div>
 </div>

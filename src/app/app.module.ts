@@ -50,7 +50,7 @@ export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 @NgModule({
-  declarations: [AppComponent, AppSignupCreatorComponent],
+  declarations: [AppComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -59,6 +59,7 @@ export function createTranslateLoader(http: HttpClient) {
     GoogleChartsModule,
     NgxChartsModule,
     HttpClientModule,
+    AppSignupCreatorComponent,
     ReactiveFormsModule,
     TranslateModule.forRoot({
       loader: {

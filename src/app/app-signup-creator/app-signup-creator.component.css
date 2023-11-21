@@ -6,6 +6,17 @@
   align-items: center;
 }
 
+.title {
+  color: var(--color-grey-3, #828282);
+  font-weight: 400;
+  font-size: 32px;
+  font-style: normal;
+}
+
+.dark {
+  color: var(--color-grey-2, #4f4f4f);
+}
+
 .signup-box {
   width: 613px;
   height: 993px;
@@ -15,4 +26,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 27px 72px;
+  box-sizing: border-box;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.width-full {
+  width: 100%;
 }
