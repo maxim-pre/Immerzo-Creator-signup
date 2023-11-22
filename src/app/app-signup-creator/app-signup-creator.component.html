@@ -1,38 +1,91 @@
 <div class="signup-container">
   <div class="signup-box">
-    <h1 class="title">
+    <h1 class="title" style="margin-bottom: 37px">
       Join as <span class="dark">brand</span> or
       <span class="dark">creator</span>
     </h1>
     <section
       class="flex-row"
-      style="width: 100%; justify-content: space-between"
+      style="width: 100%; justify-content: space-between; margin-bottom: 30px"
     >
       <app-user-type-input
+        #brand
         [description]="brandSelectText"
         [selected]="false"
       ></app-user-type-input>
       <app-user-type-input
+        #creator
         [selected]="true"
         [description]="creatorSelectText"
       ></app-user-type-input>
     </section>
     <div class="flex-col width-full">
-      <div>
-        <label>Email</label>
-        <input placeholder="Enter your email address" type="email" />
+      <div class="flex-col" style="margin-bottom: 30px">
+        <label class="form-label">Email</label>
+        <input
+          placeholder="Enter your email address"
+          type="email"
+          style="outline: none"
+          class="text-input"
+        />
       </div>
-      <div>
-        <label>Password</label>
-        <input placeholder="Enter your email address" type="password" />
+      <div class="flex-col" style="margin-bottom: 30px">
+        <label class="form-label">Password</label>
+        <input
+          placeholder="Enter your email address"
+          type="password"
+          style="outline: none"
+          class="text-input"
+        />
       </div>
-      <div>
-        <label>Confirm Password</label>
-        <input placeholder="Enter your email address" type="password" />
+      <div class="flex-col" style="margin-bottom: 30px">
+        <label class="form-label">Confirm Password</label>
+        <input
+          placeholder="Enter your email address"
+          type="password"
+          style="outline: none"
+          class="text-input"
+        />
       </div>
     </div>
-    <div>
-      <select name="" id="" type="checkbox"></select>
+    <div class="width-full" style="margin-bottom: 30px">
+      <mat-checkbox
+        class="example-margin"
+        [(ngModel)]="checked"
+        [color]="'#8325e7'"
+        >I agree to Immerzo's
+        <a href="https://google.com">Terms of Service</a> and
+        <a href="https://google.com"> Privacy Policy </a></mat-checkbox
+      >
     </div>
+    <button
+      mat-button
+      class="teal-button width-full"
+      style="margin-bottom: 30px; font-weight: bold"
+    >
+      Sign up
+    </button>
+    <p>Already have an account? <a href="https://google.com">Log in</a></p>
+  </div>
+  <section class="image-area">
+    <div class="figma-image1-container">
+      <img class="rectangle-image" src="../../assets/images/figma_image1.png" />
+    </div>
+    <div class="figma-image2-container">
+      <img class="rectangle-image" src="../../assets/images/figma_image2.png" />
+    </div>
+  </section>
+  <p class="text-area">
+    Create briefs, select from a variety of project templates, such as branded
+    games, in-world product placement, VR/AR content, NFT collections and
+    digital clothing. Alternatively, you can use our AI-powered system to
+    generate new project ideas. Invite Creators to participate in content
+    creation.
+  </p>
+  <div class="left-image">
+    <img src="../../assets/images/figma_image3.png" class="rectangle-image" />
+  </div>
+  <div class="right-image">
+    <img src="../../assets/images/figma_image4.png" class="rectangle-image" />
   </div>
 </div>

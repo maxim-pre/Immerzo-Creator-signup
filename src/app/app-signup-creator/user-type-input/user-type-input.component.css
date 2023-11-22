@@ -12,17 +12,26 @@
   box-sizing: border-box;
   cursor: pointer;
   height: 142px;
+  color: var(--color-grey-3, #828282);
+  font-size: 15px;
 }
 
 .checkbox {
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
   flex-shrink: 0;
   border-radius: 100%;
   border: 2px solid var(--color-grey-3, #828282);
   margin-bottom: 15px;
 }
 
-.selected {
+.user-type-select-container > .selected {
   border: none;
+  color: var(--color-grey-2, #4f4f4f);
+}
+
+@media screen and (max-width: 600px) {
+  .user-type-select-container {
+    max-width: 170px;
+  }
 }

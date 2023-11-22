@@ -1,5 +1,5 @@
 <div class="user-type-select-container" (click)="handleSelect()">
-  <div *ngIf="selected === false" class="checkbox"></div>
+  <div *ngIf="!selected" class="checkbox"></div>
   <div *ngIf="selected" class="checkbox selected">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -29,5 +29,7 @@
       />
     </svg>
   </div>
-  <p>{{ description }}</p>
+  <p [ngClass]="{ selected: selected }" style="font-weight: 500">
+    {{ description }}
+  </p>
 </div>

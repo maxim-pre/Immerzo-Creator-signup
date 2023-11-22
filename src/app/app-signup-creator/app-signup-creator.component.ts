@@ -7,7 +7,9 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-app-signup-creator',
   templateUrl: './app-signup-creator.component.html',
@@ -19,18 +21,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     ReactiveFormsModule,
     UserTypeInputComponent,
+    MatCheckboxModule,
   ],
 })
 export class AppSignupCreatorComponent {
-  public brandSelected: Boolean = true;
-  public creatorSelected: Boolean = false;
+  brandSelected: Boolean = true;
+  creatorSelected: Boolean = false;
+  checked: Boolean = false;
 
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
-  passwordFormControl = new FormControl('', [Validators.required]);
-  passwordConfirmationFormControl = new FormControl('', [Validators.required]);
+  handleSelect(): void {}
 
   public brandSelectText: String =
     "I'm a brand owner wants to hire for marketing";
