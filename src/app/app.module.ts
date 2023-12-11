@@ -52,7 +52,7 @@ export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 @NgModule({
-  declarations: [AppComponent, SignupPage1Component, SignupPage2Component],
+  declarations: [AppComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,

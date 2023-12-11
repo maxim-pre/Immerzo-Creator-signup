@@ -19,20 +19,21 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatInputModule,
     ReactiveFormsModule,
     UserTypeInputComponent,
+    SignupPage1Component,
     MatCheckboxModule,
     CommonModule,
   ],
 })
 export class AppSignupCreatorComponent {
-  selectedType: string = '';
+  userType: string = '';
   typeSelected: boolean = false;
 
   handleSelectUserType(type: string): void {
-    if (this.selectedType === type) {
-      this.selectedType = '';
+    if (this.userType === type) {
+      this.userType = '';
       this.typeSelected = false;
     } else {
-      this.selectedType = type;
+      this.userType = type;
       this.typeSelected = true;
     }
   }
