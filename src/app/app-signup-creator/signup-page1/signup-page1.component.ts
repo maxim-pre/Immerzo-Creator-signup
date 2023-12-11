@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserTypeInputComponent } from '../user-type-input/user-type-input.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-signup-page1',
@@ -14,6 +15,7 @@ export class SignupPage1Component {
   @Input() handleSelectUserType: (user_type: string) => void = () => {};
   @Input() userType?: string;
   @Input() typeSelected?: boolean;
+  @Input() signupForm?: FormGroup;
   public brandSelectText: string =
     "I'm a brand owner wants to hire for marketing";
 

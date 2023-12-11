@@ -1,5 +1,6 @@
 <app-signup-page1
   [handleSelectUserType]="handleSelectUserType"
-  [userType]="userType"
+  [userType]="signupForm.get('userType')?.value"
   [typeSelected]="typeSelected"
+  [signupForm]="signupForm"
 ></app-signup-page1>
