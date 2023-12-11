@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { UserTypeInputComponent } from './user-type-input/user-type-input.component';
+
 import { SignupPage1Component } from './signup-page1/signup-page1.component';
 import { SignupPage2Component } from './signup-page2/signup-page2.component';
-import { CommonModule } from '@angular/common';
+import { SignupPage3Component } from '../signup-page3/signup-page3.component';
+import { UserTypeInputComponent } from './user-type-input/user-type-input.component';
 
+import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatFormFieldModule } from '@angular/material/form-field';
 @Component({
   selector: 'app-app-signup-creator',
   templateUrl: './app-signup-creator.component.html',
@@ -15,13 +14,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   standalone: true,
   imports: [
     FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
     ReactiveFormsModule,
-    UserTypeInputComponent,
-    SignupPage1Component,
-    MatCheckboxModule,
     CommonModule,
+    SignupPage1Component,
+    SignupPage2Component,
+    SignupPage3Component,
+    UserTypeInputComponent,
   ],
 })
 export class AppSignupCreatorComponent {
