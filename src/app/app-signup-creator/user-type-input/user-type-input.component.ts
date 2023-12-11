@@ -11,8 +11,5 @@ import { CommonModule } from '@angular/common';
 export class UserTypeInputComponent {
   @Input() selected?: Boolean;
   @Input() description?: String;
-
-  handleSelect(): void {
-    this.selected = !this.selected;
-  }
+  @Input() onSelect?: Function;
 }

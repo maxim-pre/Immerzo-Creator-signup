@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
 import { UserTypeInputComponent } from './user-type-input/user-type-input.component';
-import {
-  FormControl,
-  Validators,
-  FormsModule,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { SignupPage1Component } from './signup-page1/signup-page1.component';
+import { SignupPage2Component } from './signup-page2/signup-page2.component';
+import { CommonModule } from '@angular/common';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-app-signup-creator',
   templateUrl: './app-signup-creator.component.html',
@@ -22,14 +20,29 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule,
     UserTypeInputComponent,
     MatCheckboxModule,
+    CommonModule,
   ],
 })
 export class AppSignupCreatorComponent {
-  brandSelected: Boolean = true;
-  creatorSelected: Boolean = false;
-  checked: Boolean = false;
+  selectedType: string = '';
+  typeSelected: boolean = false;
 
-  handleSelect(): void {}
+  handleSelectUserType(type: string): void {
+    if (this.selectedType === type) {
+      this.selectedType = '';
+      this.typeSelected = false;
+    } else {
+      this.selectedType = type;
+      this.typeSelected = true;
+    }
+  }
+
+  test: Boolean = true;
+
+  TermsOfService: Boolean = false;
+  email: String = '';
+  password: String = '';
+  confirmPassword: String = '';
 
   public brandSelectText: String =
     "I'm a brand owner wants to hire for marketing";
