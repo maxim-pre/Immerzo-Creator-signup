@@ -47,12 +47,13 @@ import { AppComponent } from './app.component';
 import { AppSignupCreatorComponent } from './app-signup-creator/app-signup-creator.component';
 import { SignupPage1Component } from './app-signup-creator/signup-page1/signup-page1.component';
 import { SignupPage2Component } from './app-signup-creator/signup-page2/signup-page2.component';
+import { SignupPage3Component } from './signup-page3/signup-page3.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SignupPage3Component],
   imports: [
     AppRoutingModule,
     BrowserModule,
