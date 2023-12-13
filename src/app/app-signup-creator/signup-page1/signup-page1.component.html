@@ -18,60 +18,66 @@
     </section>
 
     <div class="w-full" [class.hidden]="!typeSelected">
-      <div class="flex-col w-full text-xs">
-        <div class="flex-col mb-3" style="">
-          <label class="form-label">Email</label>
-          <input
-            placeholder="Enter your email address"
-            type="email"
-            style="outline: none"
-            class="text-input"
-          />
-        </div>
-        <div class="flex-col mb-3" style="">
-          <label class="form-label">Password</label>
-          <input
-            placeholder="Enter your email address"
-            type="password"
-            style="outline: none"
-            class="text-input"
-          />
-        </div>
-        <div class="flex-col mb-3" style="">
-          <label class="form-label">Confirm Password</label>
-          <input
-            placeholder="Enter your email address"
-            type="password"
-            style="outline: none"
-            class="text-input"
-          />
-        </div>
-      </div>
-      <div class="mb-3" style="">
-        <mat-checkbox class="example-margin" [color]="'#8325e7'"
-          >I agree to Immerzo's
-          <a href="https://google.com" class="text-[#3366CC] hover:underline"
-            >Terms of Service</a
+      <form [formGroup]="page1Form">
+        <div class="flex-col w-full text-xs">
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              required
+              placeholder="Enter your email address"
+              formControlName="email"
+            />
+            <mat-error *ngIf="true">Email is required</mat-error>
+            <mat-error>Invalid Email format</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>password</mat-label>
+            <input
+              matInput
+              required
+              placeholder="Enter your password"
+              type="password"
+              formControlName="password"
+            />
+            <mat-error *ngIf="true">Password is required</mat-error>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Confirm Password</mat-label>
+            <input
+              matInput
+              required
+              placeholder="Enter your password"
+              type="password"
+            />
+          </mat-form-field>
+          <mat-checkbox [color]="'#8325e7'" formControlName="TOS"
+            >I agree to Immerzo's
+            <a href="https://google.com" class="text-[#3366CC] hover:underline"
+              >Terms of Service</a
+            >
+            and
+            <a href="https://google.com" class="text-[#3366CC] hover:underline">
+              Privacy Policy
+            </a></mat-checkbox
           >
-          and
-          <a href="https://google.com" class="text-[#3366CC] hover:underline">
-            Privacy Policy
-          </a></mat-checkbox
+        </div>
+        <div class="mb-3" style=""></div>
+        <button
+          (click)="test()"
+          mat-button
+          type="submit"
+          class="teal-button font-bold w-full py-1 mb-3"
         >
-      </div>
-      <button
-        mat-button
-        type="submit"
-        class="teal-button font-bold w-full py-1 mb-3"
-      >
-        Sign up
-      </button>
-      <p class="text-center">
-        Already have an account?
-        <a href="https://google.com" class="text-[#3366CC] hover:underline"
-          >Log in</a
-        >
-      </p>
+          Sign up
+        </button>
+        <p class="text-center">
+          Already have an account?
+          <a href="https://google.com" class="text-[#3366CC] hover:underline"
+            >Log in</a
+          >
+        </p>
+      </form>
     </div>
   </div>
   <section class="image-area mb-4">

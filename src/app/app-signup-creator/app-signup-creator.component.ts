@@ -30,6 +30,7 @@ export class AppSignupCreatorComponent {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       user_type: ['', Validators.required],
+      TOS: ['', Validators.required],
     });
 
     this.page2Form = this.fb.group({
@@ -44,6 +45,11 @@ export class AppSignupCreatorComponent {
   onSubmit() {
     const data = { ...this.page1Form.value, ...this.page2Form.value };
     console.log(data);
+  }
+
+  onTest() {
+    console.log('hello');
+    console.log(this.page1Form.value);
   }
 
   handleSelectUserType(type: string): void {
