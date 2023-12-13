@@ -15,7 +15,7 @@ export class SignupPage1Component {
   @Input() handleSelectUserType: (user_type: string) => void = () => {};
   @Input() userType?: string;
   @Input() typeSelected?: boolean;
-  @Input() signupForm?: FormGroup;
+  @Input() page1Form?: FormGroup;
   public brandSelectText: string =
     "I'm a brand owner wants to hire for marketing";
 
